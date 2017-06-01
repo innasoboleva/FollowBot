@@ -189,7 +189,6 @@ class IgFollower:
                         self.follow_counter += 1
                         self.followed_users.append(each_user)
                         print('Followed {}'.format(each_user))
-                        print(self.followed_users)
                         print('Going to sleep now.')
                         time.sleep(self.sleep_delay * 0.9 + self.sleep_delay * 0.2 * random.random())
                         if self.unfollow:
@@ -213,7 +212,6 @@ class IgFollower:
                         self.follow_counter -= 1
                         self.followed_users.remove(user)
                         print('Unfollowed {}'.format(user))
-                        print(self.followed_users)
                         print('Going to sleep now.')
                         time.sleep(self.sleep_delay * 0.9 + self.sleep_delay * 0.2 * random.random())
                     elif unfollow.status_code == 400:
